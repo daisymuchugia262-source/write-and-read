@@ -1,0 +1,22 @@
+
+import csv
+
+food = [
+    ["name", "weight_kg", "price", "expiry_date"],
+    ["rice", 2, 300, "2027-06-10"],
+    ["beans", 1, 180, "2027-05-15"],
+    ["sugar", 2, 350, "2027-08-20"],
+    ["flour", 2, 160, "2027-04-12"],
+    ["salt", 1, 100, "2028-01-10"],
+    ["tea leaves", 0.5, 250, "2027-09-05"],
+    ["maize flour", 2, 150, "2027-03-15"],
+    ["cooking oil", 1, 300, "2027-07-20"],
+    ["spaghetti", 0.5, 120, "2027-11-10"],
+    ["oats", 1, 280, "2027-10-15"]
+]
+
+with open("food.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(food)
+
+print("CSV file saved")
